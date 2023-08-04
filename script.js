@@ -8,6 +8,9 @@ const checkBtn = document.querySelector('.check');
 const guessInput = document.querySelector('.guess');
 
 document.querySelector('.check').addEventListener('click', checkNumber);
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter') checkNumber();
+});
 document.querySelector('.again').addEventListener('click', playAgain);
 
 function checkNumber() {
